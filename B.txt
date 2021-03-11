@@ -1,0 +1,19 @@
+var a, b, s1, s2:integer;
+begin
+  write('Введите 2 числа через пробел: ');
+  readln(s1, s2);
+  a := s1;
+  b := s2;
+  while(not(a=0) and not(b=0)) do
+  begin
+    if(a > b) then
+      a := a mod b
+    else
+      b := b mod a;
+  end;
+  if(a > b) then
+    writeln('НОД(', s1, ', ', s2, ') = ', a)
+  else
+    writeln('НОД(', s1, ', ', s2, ') = ', b)
+end.
+//введи числа из задания, и сами заполните таблицу
